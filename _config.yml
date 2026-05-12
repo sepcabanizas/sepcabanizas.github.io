@@ -22,7 +22,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 author:
-  name   : "First Lastname"
+  name   : "Sep Venmuel F. Cabanizas"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "I hold a B.S. in Electrical and Computer Engineering, and when I'm not engineering the future, you can find me building cool projects in the lab, dominating in video games, hitting PRs at the gym, and turning heads with my love for cars.
 "
