@@ -1,0 +1,290 @@
+---
+layout: single
+title: "Resume"
+date: 2026-05-12
+permalink: /resume/
+author_profile: true
+toc: true
+toc_label: "Sections"
+toc_icon: "file-alt"
+classes: wide
+---
+
+<style>
+  .resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #1D9E75;
+  }
+  .resume-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+  }
+  .resume-contact {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  .resume-contact a {
+    color: #1D9E75;
+    text-decoration: none;
+  }
+  .resume-contact a:hover {
+    text-decoration: underline;
+  }
+  .resume-section {
+    margin-bottom: 2rem;
+  }
+  .resume-section h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #1D9E75;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  .entry {
+    margin-bottom: 1.25rem;
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .entry-meta {
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+  }
+  .entry-sub {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.1rem;
+    margin-bottom: 0.4rem;
+  }
+  .entry ul {
+    margin: 0.25rem 0 0 1.25rem;
+    padding: 0;
+  }
+  .entry ul li {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: #333;
+    margin-bottom: 0.2rem;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 2rem;
+  }
+  .skill-row {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .skill-label {
+    font-weight: 700;
+    color: #222;
+  }
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.4rem;
+  }
+  .tag {
+    background: #E1F5EE;
+    color: #0F6E56;
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-family: monospace;
+  }
+  .award-badge {
+    display: inline-block;
+    background: #FFF8E1;
+    color: #856404;
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    border-radius: 100px;
+    margin-right: 6px;
+    margin-top: 4px;
+  }
+  @media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .entry-header { flex-direction: column; }
+  }
+</style>
+
+<div class="resume-header">
+  <h1>Sep Venmuel Fabian Cabanizas</h1>
+  <div class="resume-contact">
+    Royal Oak, MI &nbsp;·&nbsp;
+    <a href="tel:+15869255024">(586) 925-5024</a> &nbsp;·&nbsp;
+    <a href="mailto:sepvenmuel@gmail.com">sepvenmuel@gmail.com</a> &nbsp;·&nbsp;
+    <a href="https://linkedin.com/in/sepcabanizas" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://sepcabanizas.github.io" target="_blank">sepcabanizas.github.io</a>
+  </div>
+</div>
+
+---
+
+<div class="resume-section">
+<h2>Education</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Wayne State University &mdash; College of Engineering</span>
+    <span class="entry-meta">Detroit, MI</span>
+  </div>
+  <div class="entry-sub">B.S. in Electrical and Computer Engineering &nbsp;·&nbsp; May 2026</div>
+  <div style="font-size:0.85rem; color:#444; margin-top:0.35rem;">
+    <strong>Relevant Coursework:</strong> Circuits, Electronics, Microelectronics, Microcomputers, Control Systems, Digital Logic, Linear Systems and Signals, Analog IC Design, Communication Theory, Computer Architecture
+  </div>
+  <div style="margin-top:0.4rem;">
+    <span class="award-badge">🏆 Warrior Award Recipient</span>
+    <span class="award-badge">📋 Dean's List 2022–2024</span>
+  </div>
+</div>
+</div>
+
+---
+
+<div class="resume-section">
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Autonomous Soil Analysis Rover</span>
+    <span class="entry-meta">Jan 2026 – Apr 2026 &nbsp;·&nbsp; Capstone Senior Design</span>
+  </div>
+  <div class="tag-list">
+    <span class="tag">ESP32</span><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">PWM Motor Control</span><span class="tag">DC Motors</span>
+  </div>
+  <ul>
+    <li>Developed an ESP32-based autonomous rover with Bluetooth control and line-following navigation for soil data collection.</li>
+    <li>Designed the embedded system architecture integrating ESP32, motor drivers, and sensors for autonomous rover operation.</li>
+    <li>Implemented autonomous line-following using PWM differential steering for precise dual-motor control.</li>
+    <li>Integrated an 8-parameter soil sensor and servo-actuated sampling arm for automated multi-depth soil data collection.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Multi-Cycle MIPS Processor</span>
+    <span class="entry-meta">Aug 2025 – Nov 2025 &nbsp;·&nbsp; Computer Architecture</span>
+  </div>
+  <div class="tag-list">
+    <span class="tag">Verilog</span><span class="tag">CPU Architecture</span><span class="tag">Cadence</span><span class="tag">Finite State Machines</span>
+  </div>
+  <ul>
+    <li>Designed a 32-bit multi-cycle MIPS CPU in Verilog using a Mealy FSM control unit and behavioral hardware modeling.</li>
+    <li>Implemented and verified CPU instructions (add, sub, addi, nor, lw, sw, beq, bne) and a custom <code>lwi</code> instruction using waveform-based simulation.</li>
+    <li>Validated datapath and control signals using simulations and instruction-level test programs.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">RFID Access Control System</span>
+    <span class="entry-meta">Oct 2024 – Dec 2024 &nbsp;·&nbsp; Electronics</span>
+  </div>
+  <div class="tag-list">
+    <span class="tag">Arduino</span><span class="tag">RC522 RFID</span><span class="tag">Solenoid Lock</span>
+  </div>
+  <ul>
+    <li>Designed an RFID authentication system controlling a 12V solenoid lock for secure access management.</li>
+    <li>Implemented embedded control logic with LCD, LED, and buzzer alerts for real-time authentication feedback.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Pendulum Tracking and Modeling System</span>
+    <span class="entry-meta">Aug 2024 – Dec 2024 &nbsp;·&nbsp; Numerical Methods</span>
+  </div>
+  <div class="tag-list">
+    <span class="tag">Arduino</span><span class="tag">Ultrasonic Sensor</span><span class="tag">MATLAB AppDesigner</span>
+  </div>
+  <ul>
+    <li>Developed an ultrasonic sensing system to measure pendulum displacement and collect time-series motion data.</li>
+    <li>Created a MATLAB AppDesigner GUI implementing Euler's method to compare theoretical and experimental behavior.</li>
+  </ul>
+</div>
+</div>
+
+---
+
+<div class="resume-section">
+<h2>Technical Skills</h2>
+
+<div class="skills-grid">
+  <div class="skill-row"><span class="skill-label">Programming:</span> C++, MATLAB, Verilog, ARM Assembly</div>
+  <div class="skill-row"><span class="skill-label">Embedded & MCU:</span> Arduino, ESP32, PWM Motor Control, Sensor Integration</div>
+  <div class="skill-row"><span class="skill-label">Engineering Tools:</span> MATLAB AppDesigner, Cadence, LabVIEW, SolidWorks, Autodesk Inventor</div>
+  <div class="skill-row"><span class="skill-label">Software:</span> Microsoft Office, Google Workspace, Adobe Creative Suite, DaVinci Resolve</div>
+  <div class="skill-row"><span class="skill-label">Languages:</span> English (Native), Filipino / Tagalog (Fluent)</div>
+</div>
+</div>
+
+---
+
+<div class="resume-section">
+<h2>Work Experience</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Smoothie King &mdash; Shift Leader</span>
+    <span class="entry-meta">May 2024 – Feb 2026 &nbsp;·&nbsp; Royal Oak, MI</span>
+  </div>
+  <ul>
+    <li>Led 2–4 team members during high-volume shifts, managing cash, delegating tasks, and maintaining service standards.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Wayne State University Housing &amp; Residential Life &mdash; Resident Advisor / Desk Assistant</span>
+    <span class="entry-meta">Aug 2023 – Aug 2025 &nbsp;·&nbsp; Detroit, MI</span>
+  </div>
+  <ul>
+    <li>Supervised and mentored 74 students while supporting 1,400+ students, addressing academic, personal, and crisis needs.</li>
+    <li>Planned and executed 10+ programs by leading 3-person teams, allocating resources strategically, and building relationships with ~40% of residents.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Code Ninjas &mdash; Coding Instructor</span>
+    <span class="entry-meta">Jun 2023 – Sep 2023 &nbsp;·&nbsp; Troy, MI</span>
+  </div>
+  <ul>
+    <li>Taught Python and Scratch to 20+ students, strengthening foundational programming and problem-solving skills.</li>
+  </ul>
+</div>
+</div>
+
+---
+
+<div class="resume-section">
+<h2>Leadership</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Wayne State Filipino Society &mdash; President / Cultural Director</span>
+    <span class="entry-meta">May 2023 – May 2025 &nbsp;·&nbsp; Detroit, MI</span>
+  </div>
+  <ul>
+    <li>Led 159+ student members, coordinating 40+ executive and general body meetings and organizing 5 campus and regional events.</li>
+    <li>Planned and executed the Society's Philippine Culture Night (PCN), overseeing logistics for 600+ attendees, increasing attendance by 30% over previous years while raising ~$12,000 for charity and ~$5,000 for the organization.</li>
+  </ul>
+</div>
+</div>
