@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm an electrical engineer and recent graduate of the College of Engineering at Wayne State University, based in Detroit, MI. My work sits at the intersection of hardware and software — designing systems that are not just functional, but thoughtfully built.I'm drawn to problems where physical constraints meet real-world demand — from circuits that must survive harsh conditions to systems that need to operate reliably under power constraints.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+This portfolio is a curated record of my engineering work — projects, designs, and ideas developed throughout my studies and beyond. It's built to communicate clearly: what I built, why it matters, and how it works.
+
+Whether you're a recruiter, a collaborator, or just curious — you'll find real work here, documented with the same care that went into building it.
