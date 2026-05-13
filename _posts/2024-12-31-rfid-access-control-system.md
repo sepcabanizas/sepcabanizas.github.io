@@ -1,7 +1,12 @@
 ---
 layout: single
 title: "RFID Access Control System"
-categories: Project
+categories:
+  - Project
+tags:
+  - School Project
+  - Arduino IDE
+  - Arduino Microcontroller
 date: 2024-12-31
 permalink: /projects/rfid-access-control-system/
 author_profile: true
