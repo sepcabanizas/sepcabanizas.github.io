@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Pendulum Tracking and Modeling System"
+categories: Project
 date: 2024-12-31
 permalink: /projects/pendulum-tracking-modeling-system/
 author_profile: true
