@@ -4,7 +4,7 @@ title: "FPGA Vending Machine Controller"
 categories: 
   - Project
 tags:
-  - Class Project
+  - School Project
   - Verilog
 date: 2024-04-30
 permalink: /projects/fpga-vending-machine/
