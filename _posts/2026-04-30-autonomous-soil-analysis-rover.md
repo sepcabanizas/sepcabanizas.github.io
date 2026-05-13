@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Autonomous Soil Analysis Rover"
+categories: Project
 date: 2026-04-30
 permalink: /projects/autonomous-soil-analysis-rover/
 author_profile: true
