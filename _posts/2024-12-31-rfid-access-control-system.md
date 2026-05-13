@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "RFID Access Control System"
+categories: Project
 date: 2024-12-31
 permalink: /projects/rfid-access-control-system/
 author_profile: true
