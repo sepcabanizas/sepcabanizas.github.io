@@ -1,7 +1,12 @@
 ---
 layout: single
 title: "Pendulum Tracking and Modeling System"
-categories: Project
+categories:
+  - Project
+tags:
+  - School Project
+  - MATLAB
+  - App Designer
 date: 2024-12-31
 permalink: /projects/pendulum-tracking-modeling-system/
 author_profile: true
