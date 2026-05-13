@@ -3,6 +3,9 @@ layout: single
 title: "FPGA Vending Machine Controller"
 categories: 
   - Project
+tags:
+  - Class Project
+  - Verilog
 date: 2024-04-30
 permalink: /projects/fpga-vending-machine/
 author_profile: true
