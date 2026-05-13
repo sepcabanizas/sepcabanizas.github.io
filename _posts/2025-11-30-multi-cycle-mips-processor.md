@@ -1,7 +1,11 @@
 ---
 layout: single
 title: "Multi-Cycle MIPS Processor"
-categories: Project
+categories:
+  - Project
+tags:
+  - School Project
+  - Verilog
 date: 2025-11-30
 permalink: /projects/multi-cycle-mips-processor/
 author_profile: true
