@@ -1,7 +1,15 @@
 ---
 layout: single
 title: "Autonomous Soil Analysis Rover"
-categories: Project
+categories:
+  - Project
+tags:
+  - School Project
+  - ESP32
+  - Arduino Microceontroller
+  - Arduino IDE
+  - 3D Modeling
+
 date: 2026-04-30
 permalink: /projects/autonomous-soil-analysis-rover/
 author_profile: true
