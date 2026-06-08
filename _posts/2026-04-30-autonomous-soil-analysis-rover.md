@@ -276,7 +276,7 @@ classes: wide
 
     <div class="gallery-slide is-active" data-caption="Fig 1: Rover controlled via Bluetooth — demo video">
       <div class="gallery-video">
-        <iframe data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        <iframe data-src="https://www.youtube.com/embed/jbb6ph42Sn8"
           title="Rover Bluetooth control demo"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
