@@ -274,7 +274,7 @@ classes: wide
   <div class="gallery-stage">
     <button class="gallery-btn prev" onclick="moveGallery(-1)" aria-label="Previous figure">&#10094;</button>
 
-    <div class="gallery-slide is-active" data-caption="Fig 1: Rover controlled via Bluetooth — demo video">
+    <div class="gallery-slide is-active" data-caption="Fig 1: Demo video made by me">
       <div class="gallery-video">
         <iframe data-src="https://www.youtube.com/embed/jbb6ph42Sn8"
           title="Rover Bluetooth control demo"
