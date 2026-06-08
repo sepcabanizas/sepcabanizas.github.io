@@ -126,6 +126,19 @@ classes: wide
     aspect-ratio: 4 / 3;
     object-fit: cover;
   }
+  /* video slide */
+  .gallery-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+  .gallery-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
   .gallery-btn {
     position: absolute;
     top: 50%;
@@ -143,6 +156,7 @@ classes: wide
     align-items: center;
     justify-content: center;
     transition: background 0.2s ease;
+    z-index: 2;
   }
   .gallery-btn:hover {
     background: #0F6E56;
@@ -260,26 +274,34 @@ classes: wide
   <div class="gallery-stage">
     <button class="gallery-btn prev" onclick="moveGallery(-1)" aria-label="Previous figure">&#10094;</button>
 
-    <div class="gallery-slide is-active" data-caption="Fig 1: Chassis during assembly stage">
-      <img src="{{ '/assets/images/rover/fig1.jpg' | relative_url }}" alt="Chassis during assembly stage" loading="lazy">
+    <div class="gallery-slide is-active" data-caption="Fig 1: Rover controlled via Bluetooth — demo video">
+      <div class="gallery-video">
+        <iframe data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="Rover Bluetooth control demo"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="gallery-slide" data-caption="Fig 2: Voltage Regulator Circuit">
-      <img src="{{ '/assets/images/rover/fig2.jpg' | relative_url }}" alt="Voltage Regulator Circuit" loading="lazy">
+    <div class="gallery-slide" data-caption="Fig 2: Final assembled rover">
+      <img src="{{ '/assets/images/rover/final-product.jpg' | relative_url }}" alt="Final assembled rover" loading="lazy">
     </div>
-    <div class="gallery-slide" data-caption="Fig 3: Circuit all connected without frying the ESP32">
-      <img src="{{ '/assets/images/rover/fig3.jpg' | relative_url }}" alt="Circuit all connected without frying the ESP32" loading="lazy">
+    <div class="gallery-slide" data-caption="Fig 3: Chassis during assembly">
+      <img src="{{ '/assets/images/rover/chassis.jpg' | relative_url }}" alt="Chassis during assembly stage" loading="lazy">
     </div>
-    <div class="gallery-slide" data-caption="Fig 4: Rover being controlled via Bluetooth controller">
-      <img src="{{ '/assets/images/rover/fig4.jpg' | relative_url }}" alt="Rover being controlled via Bluetooth controller" loading="lazy">
+    <div class="gallery-slide" data-caption="Fig 4: Voltage regulator circuit">
+      <img src="{{ '/assets/images/rover/voltage-regulator.jpg' | relative_url }}" alt="Voltage regulator circuit" loading="lazy">
     </div>
-    <div class="gallery-slide" data-caption="Fig 5: Circuit verifying Soil Probe works">
-      <img src="{{ '/assets/images/rover/fig5.jpg' | relative_url }}" alt="Circuit verifying Soil Probe works" loading="lazy">
+    <div class="gallery-slide" data-caption="Fig 5: Full circuit wired without frying the ESP32">
+      <img src="{{ '/assets/images/rover/circuit-wired.jpg' | relative_url }}" alt="Full circuit connected without frying the ESP32" loading="lazy">
+    </div>
+    <div class="gallery-slide" data-caption="Fig 6: Verifying the soil probe">
+      <img src="{{ '/assets/images/rover/soil-probe.jpg' | relative_url }}" alt="Circuit verifying the soil probe works" loading="lazy">
     </div>
 
     <button class="gallery-btn next" onclick="moveGallery(1)" aria-label="Next figure">&#10095;</button>
   </div>
 
-  <div class="gallery-caption">Fig 1: Chassis during assembly stage</div>
+  <div class="gallery-caption">Fig 1: Rover controlled via Bluetooth — demo video</div>
 
   <div class="gallery-dots">
     <button class="gallery-dot is-active" onclick="jumpGallery(0)" aria-label="Go to figure 1"></button>
@@ -287,9 +309,10 @@ classes: wide
     <button class="gallery-dot" onclick="jumpGallery(2)" aria-label="Go to figure 3"></button>
     <button class="gallery-dot" onclick="jumpGallery(3)" aria-label="Go to figure 4"></button>
     <button class="gallery-dot" onclick="jumpGallery(4)" aria-label="Go to figure 5"></button>
+    <button class="gallery-dot" onclick="jumpGallery(5)" aria-label="Go to figure 6"></button>
   </div>
 
-  <div class="gallery-counter">1 / 5</div>
+  <div class="gallery-counter">1 / 6</div>
 </div>
 </div>
 
@@ -306,8 +329,20 @@ classes: wide
 
   function render() {
     for (var i = 0; i < slides.length; i++) {
-      slides[i].classList.toggle('is-active', i === current);
-      dots[i].classList.toggle('is-active', i === current);
+      var active = (i === current);
+      slides[i].classList.toggle('is-active', active);
+      dots[i].classList.toggle('is-active', active);
+
+      var frame = slides[i].querySelector('iframe[data-src]');
+      if (frame) {
+        if (active) {
+          if (!frame.getAttribute('src')) frame.setAttribute('src', frame.getAttribute('data-src'));
+        } else {
+          frame.setAttribute('src', '');
+        }
+      }
+      var vid = slides[i].querySelector('video');
+      if (vid && !active) vid.pause();
     }
     caption.textContent = slides[current].getAttribute('data-caption');
     counter.textContent = (current + 1) + ' / ' + slides.length;
