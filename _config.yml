@@ -59,6 +59,7 @@ defaults:
       comments: true
       share: true
       related: true
+      show_excerpts: true
   - scope:
       path: "_pages"
       type: pages
