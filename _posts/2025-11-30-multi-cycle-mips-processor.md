@@ -6,6 +6,8 @@ categories:
 tags:
   - School Project
   - Verilog
+header:
+  teaser: /assets/images/mips/datapath-diagram.jpg
 date: 2025-11-30
 permalink: /projects/multi-cycle-mips-processor/
 author_profile: true
@@ -98,8 +100,92 @@ classes: wide
     margin-right: 6px;
     margin-top: 4px;
   }
+
+  /* ---- Slideshow gallery ---- */
+  .gallery {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .gallery-stage {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f2f4f3;
+  }
+  .gallery-slide {
+    display: none;
+  }
+  .gallery-slide.is-active {
+    display: block;
+  }
+  .gallery-slide img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(15, 110, 86, 0.82);
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 2;
+  }
+  .gallery-btn:hover {
+    background: #0F6E56;
+  }
+  .gallery-btn.prev { left: 10px; }
+  .gallery-btn.next { right: 10px; }
+  .gallery-caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0.7rem;
+    min-height: 1.4em;
+  }
+  .gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 0.6rem;
+  }
+  .gallery-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #cfe7df;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .gallery-dot.is-active {
+    background: #1D9E75;
+    transform: scale(1.25);
+  }
+  .gallery-counter {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 0.35rem;
+  }
+
   @media (max-width: 600px) {
     .entry-header { flex-direction: column; }
+    .gallery-btn { width: 36px; height: 36px; font-size: 1rem; }
   }
 </style>
 
@@ -166,10 +252,75 @@ classes: wide
 <div class="project-section">
 <h2>Figures</h2>
 
-<div class="entry">
-  <ul>
-    <li><strong>Fig 1:</strong> Sample Summary of Test Results (from Project Report)</li>
-    <li><strong>Fig 2:</strong> Verilog Control Logic for instruction execution stage</li>
-  </ul>
+<div class="gallery" id="mipsGallery">
+  <div class="gallery-stage">
+    <button class="gallery-btn prev" onclick="moveGallery(-1)" aria-label="Previous figure">&#10094;</button>
+
+    <div class="gallery-slide is-active" data-caption="Fig 1: Multi-Cycle Datapath Diagram">
+      <img src="{{ '/assets/images/mips/datapath-diagram.jpg' | relative_url }}" alt="Multi-Cycle MIPS Datapath Diagram" loading="lazy">
+    </div>
+    <div class="gallery-slide" data-caption="Fig 2: Cadence Waveform Simulation">
+      <img src="{{ '/assets/images/mips/cadence-waveform.jpg' | relative_url }}" alt="Cadence waveform simulation output" loading="lazy">
+    </div>
+    <div class="gallery-slide" data-caption="Fig 3: Sample Summary of Test Results">
+      <img src="{{ '/assets/images/mips/test-results-table.jpg' | relative_url }}" alt="Test results table from project report" loading="lazy">
+    </div>
+    <div class="gallery-slide" data-caption="Fig 4: Verilog Control Logic for Instruction Execution Stage">
+      <img src="{{ '/assets/images/mips/verilog-code.jpg' | relative_url }}" alt="Verilog control logic code" loading="lazy">
+    </div>
+
+    <button class="gallery-btn next" onclick="moveGallery(1)" aria-label="Next figure">&#10095;</button>
+  </div>
+
+  <div class="gallery-caption">Fig 1: Multi-Cycle Datapath Diagram</div>
+
+  <div class="gallery-dots">
+    <button class="gallery-dot is-active" onclick="jumpGallery(0)" aria-label="Go to figure 1"></button>
+    <button class="gallery-dot" onclick="jumpGallery(1)" aria-label="Go to figure 2"></button>
+    <button class="gallery-dot" onclick="jumpGallery(2)" aria-label="Go to figure 3"></button>
+    <button class="gallery-dot" onclick="jumpGallery(3)" aria-label="Go to figure 4"></button>
+  </div>
+
+  <div class="gallery-counter">1 / 4</div>
 </div>
 </div>
+
+<script>
+(function () {
+  var gallery = document.getElementById('mipsGallery');
+  if (!gallery) return;
+
+  var slides  = gallery.querySelectorAll('.gallery-slide');
+  var dots    = gallery.querySelectorAll('.gallery-dot');
+  var caption = gallery.querySelector('.gallery-caption');
+  var counter = gallery.querySelector('.gallery-counter');
+  var current = 0;
+
+  function render() {
+    for (var i = 0; i < slides.length; i++) {
+      var active = (i === current);
+      slides[i].classList.toggle('is-active', active);
+      dots[i].classList.toggle('is-active', active);
+    }
+    caption.textContent = slides[current].getAttribute('data-caption');
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  window.moveGallery = function (dir) {
+    current = (current + dir + slides.length) % slides.length;
+    render();
+  };
+
+  window.jumpGallery = function (n) {
+    current = n;
+    render();
+  };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  window.moveGallery(-1);
+    if (e.key === 'ArrowRight') window.moveGallery(1);
+  });
+
+  render();
+})();
+</script>
