@@ -6,9 +6,11 @@ categories:
 tags:
   - School Project
   - ESP32
-  - Arduino Microceontroller
+  - Arduino Microcontroller
   - Arduino IDE
   - 3D Modeling
+header:
+  teaser:  /assets/images/rover/final-product.jpg
 
 date: 2026-04-30
 permalink: /projects/autonomous-soil-analysis-rover/
